@@ -11,32 +11,42 @@
 <body>
     <header>
         <h1>Library</h1>
-
-        <button id="btn_new_book">Add new book</button>
     </header>
 
     <main>
         <div id="main">
-
+            <button class="empty-card" id="btn-new-book" title="Add your new book">
+                <img src="./images/plus-box-multiple-outline.svg" class="icon">
+            </button>
         </div>
 
         <div id="dialog-div">
             <dialog id="dialog">
                 <form method="dialog" id="form">
-                    <label for="book_title">Book title:</label>
-                    <input type="text" id="book_title" name="book_title">
+                    <div class="form-div">
+                        <label for="book_title">Book title:</label>
+                        <input type="text" id="book_title" name="book_title">
+                    </div>
 
-                    <label for="book_author">Book author:</label>
-                    <input type="text" id="book_author" name="book_author">
+                    <div class="form-div">
+                        <label for="book_author">Book author:</label>
+                        <input type="text" id="book_author" name="book_author">
+                    </div>
 
-                    <label for="book_author">Number of pages:</label>
-                    <input type="number" id="book_numOfPages" min="0" name="book_numOfPages">
+                    <div class="form-div">
+                        <label for="book_author">Number of pages:</label>
+                        <input type="number" id="book_numOfPages" min="0" name="book_numOfPages">
+                    </div>
 
-                    <label for="book_isRead">Did you read this book?</label>
-                    <input type="checkbox" id="book_isRead" name="book_isRead">
+                    <div class="form-div-checkbox">
+                        <label for="book_isRead">Did you read this book?</label>
+                        <input type="checkbox" id="book_isRead" name="book_isRead">
+                    </div>
 
-                    <button value="cancel">Cancel</button>
-                    <button value="save">Save book</button>
+                    <div class="form-div-buttons">
+                        <button value="save" id="btn-save">Save book</button>
+                        <button value="cancel" id="btn-cancel">Cancel</button>
+                    </div>
                 </form>
             </dialog>
         </div>
@@ -44,6 +54,12 @@
         <script src="./scripts/mainScript.js"></script>
         <script src="./scripts/btnsListener.js"></script>
     </main>
+
+    <footer>
+        <div class="full-attribution">
+            <p class="text" id="footerText">&#169; 2026 Copyright Valhstack</p>
+        </div>
+    </footer>
 </body>
 
 </html>

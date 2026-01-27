@@ -1,6 +1,6 @@
 const dialog = document.getElementById("dialog");
 
-document.getElementById("btn_new_book").addEventListener("click", () => {
+document.getElementById("btn-new-book").addEventListener("click", () => {
     dialog.showModal();
 });
 
