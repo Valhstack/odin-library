@@ -1,15 +1,13 @@
 const myLibrary = [];
 
-function Book(title, author, numOfPages, isRead, ID) {
-    if (!new.target) {
-        throw Error("You must use the 'new' operator to call the constructor");
+class Book{
+    constructor(title, author, numOfPages, isRead, ID){
+        this.title = title;
+        this.author = author;
+        this.numOfPages = numOfPages;
+        this.isRead = isRead;
+        this.ID = ID;
     }
-
-    this.title = title;
-    this.author = author;
-    this.numOfPages = numOfPages;
-    this.isRead = isRead;
-    this.ID = ID;
 }
 
 function addBookToLibrary(title, author, numOfPages, isRead) {
@@ -18,9 +16,6 @@ function addBookToLibrary(title, author, numOfPages, isRead) {
 
     myLibrary.push(book);
 }
-
-addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
-addBookToLibrary("Lord of the Rings", "J.R.R. Tolkien", 1077, false);
 
 const mainDiv = document.getElementById("main");
 const emptyCard = document.getElementById("btn-new-book");
@@ -110,8 +105,6 @@ function displayBooks() {
         attachListeners();
     }
 }
-
-displayBooks();
 
 function clearDisplayedBooks() {
     const bookCards = mainDiv.querySelectorAll(".card");
